@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us</title>
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300&display=swap');">
+    <link rel="stylesheet" href="css/s.css">
+</head>
+
+<style>
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.join{
+    background-image: url(images/books.jpg);
+    -webkit-background-size : cover ;
+    background-size: cover;
+    background-position: center center;
+    background-position: center center;
+    font-family: poppins;
+}
+.cards{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* background-image: url(images/books.jpg);
+    -webkit-background-size : cover ;
+    background-size: cover;
+    background-position: center center;
+    background-position: center center;
+    font-family: poppins; */
+    /* border: 2px solid red; */
+}
+
+.wrapper{
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    /* border: 2px solid red; */
+    margin-bottom: 150px;
+}
+
+.wrapper .box{
+    width: 400px;
+    height: 400px;
+    border-radius: 15px;
+    transition: transform 500ms ease-out;
+    overflow: hidden;
+    color: #fff;
+    padding: 5%;
+    text-align: center;
+    background: rgba(255,255, 255,0.2);
+    backdrop-filter: blur(30px);
+    border: 2px solid rgba(255,255, 255,0.1);
+}
+
+.box h2{
+    font-size: 5rem;
+    margin-bottom: 30px;
+    color: rgba(255,255, 255,0.7);
+}
+
+.box p{
+    line-height: 1.9;
+    color: rgba(255,255, 255,0.7);
+    font-size: 14px;
+}
+
+.box a{
+    border: none;
+    background: #fff;
+    padding: 10px 40px;
+    color: rgb(2, 63, 177);
+    display: inline-block;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 50px;
+    font-weight: bold;
+}
+.wrapper .box ::before{
+    content: '';
+    background: rgba(255,255, 255,0.3);
+    width: 60%;
+    height: 100%;
+    top:  0% ;
+    left: -125%;
+    transform: skew(45deg);
+    position: absolute;
+    animation-direction: left;
+    transition-duration: 500ms;
+}
+.wrapper .box:hover{
+    transform: translateY(-5%);
+}
+.wrapper .box:hover::before{
+    left: 150%;
+}
+.good{
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 2px solid red;    */
+    text-align: center;
+    font-size: 3rem;
+    /* color: rgba(255,255, 255,0.7); */
+    color: rgba(255,255, 255,1);
+    /* margin-top: 100px; */
+
+}
+
+
+@media screen and (max-width:770px){
+    .wrapper .box{
+        display: inline-block;
+        width: 300px;
+        height: 300px;
+    }
+
+    .wrapper .box{
+        width: 200px;
+        height: 200px;
+    }
+    .box{
+        padding: 10px;
+    }
+    .box h2{
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    .box p{
+        font-size: 7px;
+    }
+    .cards{
+        background-size: cover;
+    }
+    .box a{
+        padding: 5px 10px;
+        margin: 10px;
+    }
+    .good{
+        font-size: 2rem;
+        margin-top: 100px;
+    }
+}
+
+</style>
+
+<body>
+    <!-- <div class="good">
+        <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h1>
+       </div>     -->
+    <section class="join">
+        <div class="good">
+            <h1>Edukul Empowers Young Minds with the power of education to achieve success in life</h1>
+        </div>  
+    <div class="cards">
+        <div class="wrapper">
+            <div class="box">
+                <h2>As Intern</h2>
+                <p>Come and join as intern to gain work requirements and satisfy requirements for a qualification. Work, learn amd sharpen your skills by doing internship training with Edukul .</p>
+                <a href="">Learn More</a>
+            </div>
+            <div class="box">
+                <h2>As volunteer</h2>
+                <p>Join Edukul as an volunteer and give your time or efford to connect to your community and make it a better place. Work, help and make a Difference .</p>
+                <a href="">Learn More</a>
+            </div>
+    </div>
+    </section>
+    </div>
+
+</body>
+</html>
+

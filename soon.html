@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coming Soon</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+    header {
+      background-image: url(images/comigblack.jpg);
+      height: 100vh;
+      background-position: center;
+      background-size: cover;
+    }
+    .soon {
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+      font-family: "Mochiy Pop P One", sans-serif;
+    }
+    h1 {
+      font: 60px;
+      letter-spacing: 15px;
+    }
+
+    hr {
+      width: 50%;
+      margin: 30px auto;
+      border: 1.5px solid #fff;
+    }
+    p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+    #launch {
+      font-size: 40px;
+      word-spacing: 20px;
+    }
+  </style>
+
+  <body>
+    <header>
+      <div class="soon">
+          <marquee behavior="" direction="">Good things take time</marquee>
+        <p>Building Awesome Website</p>
+        <h1>COMING SOON</h1>
+
+        <hr />
+        <p id="launch">
+          <!-- sun bhosdike...ek to yha kia change.......hr time unit ko apna container dia -->
+          <span id="days"></span>
+          <span id="hours"></span>
+          <span id="minutes"></span>
+          <span id="seconds"></span>
+        </p>
+      </div>
+    </header>
+  </body>
+
+  <script>
+    // aur bsdk script poori change kri h
+    var time = {
+      days: 59,
+      hours: 23,
+      minutes: 59,
+      seconds: 59,
+      container: document.querySelector("#launch"),
+      interval: 1000,
+      timer: null,
+    };
+    //object ko destructure kia h
+    var { days, hours, minutes, seconds, container, interval, timer } = time;
+    time.timer = setInterval(() => {
+      if (days < 10)
+        container.querySelector("#days").innerText = "0" + days + "d ";
+      else container.querySelector("#days").innerText = days + "d ";
+      if (hours < 10)
+        container.querySelector("#hours").innerText = "0" + hours + "hr ";
+      else container.querySelector("#hours").innerText = hours + "hr ";
+      if (minutes < 10)
+        container.querySelector("#minutes").innerText = "0" + minutes + "m ";
+      else container.querySelector("#minutes").innerText = minutes + "m ";
+      if (seconds < 10)
+        container.querySelector("#seconds").innerText = "0" + seconds-- + "s ";
+      else container.querySelector("#seconds").innerText = seconds-- + "s ";
+      if (seconds == 0) {
+        minutes--;
+        seconds = 59;
+      }
+      if (minutes == 0) {
+        hours--;
+        minutes = 59;
+      }
+      if (hours == 0) {
+        days--;
+        hours = 23;
+      }
+    }, interval);
+  </script>
+</html>
